@@ -35,6 +35,6 @@
             <button class="btn" onclick="clicklogin()">Login</button>
         </div>
     </div>
-    <script src="js/Register.js"></script>
+    <script src="Register.js"></script>
 </body>
 </html>
