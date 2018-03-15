@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<body>
+    <div id="aa">
+        <h1>Register</h1>
+        <div>
+            Name     : <input type="text" id="Name">
+            <br>
+            <br>
+            Username    : <input type="text" id="Username">
+            <br>
+            <br>
+            Password    : <input type="Password" id="Password">
+            <br>
+            <br>
+            <button onclick="myFunction()">Register</button>
+            
+        </div>
+    </div>
+    <div id="bb" style="display:none">
+        <h1>Login</h1>
+        <div>
+            Username    : <input type="text" id="email">
+            <br>
+            <br>
+            Password    : <input type="Password" id="pass">
+            <br>
+            <br>
+            <button class="btn" onclick="clicklogin()">Login</button>
+        </div>
+    </div>
+    <script src="js/Register.js"></script>
+</body>
+</html>
