@@ -1,0 +1,131 @@
+<!Doctype html>
+
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function detectNull(first, last, isage, user, pass) {
+            if (first == "") {
+                window.alert("Please insert Firstname");
+                return false;
+            } else if (last == "") {
+                window.alert("Please insert Lastname");
+                return false;
+            } else if (isage == "") {
+                window.alert("Please insert Age");
+                return false;
+            } else if (user == "") {
+                window.alert("Please insert Username/E-mail");
+                return false;
+            } else if (pass == "") {
+                window.alert("Please insert Password");
+                return false;
+            }
+        }
+        function detecAge(num_age) {
+            if (num_age <= 0 || num_age > 100) {
+                window.alert("Your age is wrong, please insert again");
+                return false;
+            }
+        }
+        function lengthPassword(check_pass) {
+            if (check_pass.length < 8) {
+                window.alert("Password greater than 8 character");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <a class="navbar-brand" href="index.html">Play with HTML</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="animation_page.html">Animation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="drawing_page.html">Darwing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" class="active" href="register_page.html">Sign in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <form action="" name="regis">
+            <div class="form-group">
+                <label for="myfirst">Firstname*</label>
+                <input type="myfirst" class="form-control" id="myfirst" placeholder="Firstname" name="firstname">
+            </div>
+            <script type="text/javascript">
+
+            </script>
+            <div class="form-group">
+                <label for="mylast">Lastname*</label>
+                <input type="mylast" class="form-control" id="mylast" placeholder="Lastname" name="lastname">
+            </div>
+            <script type="text/javascript">
+
+            </script>
+            <div class="form-group">
+                <label for="myage">Age*</label>
+                <input type="number" class="form-control" id="myage" placeholder="Age" name="age">
+            </div>
+            <div class="form-group">
+                <label>Sex*</label>
+                <input type="radio" name="sex" value="male" checked>Male
+                <input type="radio" name="sex" value="female">Female
+            </div>
+            <div class="form-group">
+                <label for="myuser">Email/Username*</label>
+                <input type="myuser" class="form-control" id="myuser" placeholder="Email/Username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="mypass">Password*</label>
+                <input type="password" class="form-control" id="mypass" placeholder="Password" name="password">
+            </div>
+            <button type="button" class="btn btn-success" onclick="checkInput()">Sign in</button>
+            <script type="text/javascript">
+                function checkInput() {
+                    var firstname = document.getElementById("myfirst").value;
+                    var lastname = document.getElementById('mylast').value;
+                    var age = document.getElementById('myage').value;
+                    var username = document.getElementById('myuser').value;
+                    var password = document.getElementById('mypass').value;
+                    detectNull(firstname, lastname, age, username, password);
+                    detecAge(age);
+                    lengthPassword(password);
+                }
+            </script>
+        </form>
+        <p>
+            * Do not empty
+        </p>
+        <br>
+    </div>
+</body>
+
+</html>
